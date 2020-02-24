@@ -1,9 +1,10 @@
 const express = require('express')
 const app = express()
-const port = 3000
+const env = process.env.NODE_ENV || 'development'
+const config = require('../config.json').environmentSettings[env]
 
 app.use('/', express.static('./dist', {
   index: "index.html"
 }))
 
-app.listen(port, () => console.log(`Example app listening on port ${port}!`))
+app.listen(config.PORT, () => console.log(`Example app listening on port ${config.PORT}!`))

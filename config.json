@@ -1,0 +1,10 @@
+{
+  "environmentSettings": {
+    "development": {
+      "PORT": 3000
+    },
+    "production": {
+      "PORT": 3000
+    }
+  }
+}
